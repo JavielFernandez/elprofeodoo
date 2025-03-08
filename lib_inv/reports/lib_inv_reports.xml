@@ -1,0 +1,10 @@
+<odoo>
+    <report
+        id="action_report_lib_inv"
+        model="lib.inv.wizard"
+        string="Libro de Inventario (PDF)"
+        report_type="qweb-pdf"
+        name="lib_inv.lib_inv_report_template"
+        file="lib_inv.lib_inv_report_template"
+    />
+</odoo>

@@ -1,0 +1,18 @@
+<record id="lib_inv_wizard_form" model="ir.ui.view">
+    <field name="name">lib.inv.wizard.form</field>
+    <field name="model">lib.inv.wizard</field>
+    <field name="arch" type="xml">
+        <form string="Generar Libro de Inventario">
+            <group>
+                <field name="date_from"/>
+                <field name="date_to"/>
+                <field name="location_ids" widget="many2many_tags"/>
+                <field name="category_ids" widget="many2many_tags"/>
+            </group>
+            <footer>
+                <button name="generate_report" string="Generar Informe" type="object" class="oe_highlight"/>
+                <button string="Cancelar" class="oe_link" special="cancel"/>
+            </footer>
+        </form>
+    </field>
+</record>

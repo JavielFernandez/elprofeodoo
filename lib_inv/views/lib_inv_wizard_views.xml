@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="lib_inv_wizard_form" model="ir.ui.view">
+        <field name="name">lib.inv.wizard.form</field>
+        <field name="model">lib.inv.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Library Inventory Wizard">
+                <group>
+                    <field name="date_from" required="True" string="Fecha de inicio"/>
+                    <field name="date_to" required="True" string="Fecha de fin"/>
+                    <field name="location_ids" widget="many2many_tags" domain="[('is_library', '=', True)]" string="Ubicaciones"/>
+                    <field name="category_ids" widget="many2many_tags" domain="[('is_library_category', '=', True)]" string="Categorías"/>
+                </group>
+                <footer>
+                    <button name="generate_report" string="Generar Informe" type="object" class="oe_highlight"/>
+                    <button string="Cancelar" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_lib_inv_wizard" model="ir.actions.act_window">
+        <field name="name">Libro de Inventario</field>
+        <field name="res_model">lib.inv.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_lib_inv_wizard"
+              name="Libro de Inventario"
+              action="action_lib_inv_wizard"
+              parent="stock.menu_warehouse_report"
+              sequence="10"/>
+</odoo>
