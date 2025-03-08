@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="odoo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="data">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="record">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="field" maxOccurs="unbounded">
+                                            <xs:complexType mixed="true">
+                                                <xs:sequence minOccurs="0">
+                                                    <xs:element name="form" minOccurs="0">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="header">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element
+                                                                                name="button"
+                                                                                maxOccurs="unbounded">
+                                                                                <xs:complexType>
+                                                                                    <xs:attribute
+                                                                                        name="name"
+                                                                                        use="required" />
+                                                                                    <xs:attribute
+                                                                                        name="string"
+                                                                                        use="required" />
+                                                                                    <xs:attribute
+                                                                                        name="type"
+                                                                                        use="required" />
+                                                                                    <xs:attribute
+                                                                                        name="states"
+                                                                                        use="required" />
+                                                                                    <xs:attribute
+                                                                                        name="class" />
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                            <xs:element name="field">
+                                                                                <xs:complexType>
+                                                                                    <xs:attribute
+                                                                                        name="name"
+                                                                                        use="required" />
+                                                                                    <xs:attribute
+                                                                                        name="widget"
+                                                                                        use="required" />
+                                                                                    <xs:attribute
+                                                                                        name="statusbar_visible"
+                                                                                        use="required" />
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="sheet">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="group">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                        <xs:element
+                                                                                            name="field"
+                                                                                            maxOccurs="unbounded">
+                                                                                            <xs:complexType>
+                                                                                                <xs:attribute
+                                                                                                    name="name"
+                                                                                                    use="required" />
+                                                                                            </xs:complexType>
+                                                                                        </xs:element>
+                                                                                    </xs:sequence>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                            <xs:element
+                                                                                name="notebook">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                        <xs:element
+                                                                                            name="page">
+                                                                                            <xs:complexType>
+                                                                                                <xs:sequence>
+                                                                                                    <xs:element
+                                                                                                        name="field">
+                                                                                                        <xs:complexType>
+                                                                                                            <xs:sequence>
+                                                                                                                <xs:element
+                                                                                                                    name="tree">
+                                                                                                                    <xs:complexType>
+                                                                                                                        <xs:sequence>
+                                                                                                                            <xs:element
+                                                                                                                                name="field"
+                                                                                                                                maxOccurs="unbounded">
+                                                                                                                                <xs:complexType>
+                                                                                                                                    <xs:attribute
+                                                                                                                                        name="name"
+                                                                                                                                        use="required" />
+                                                                                                                                </xs:complexType>
+                                                                                                                            </xs:element>
+                                                                                                                        </xs:sequence>
+                                                                                                                        <xs:attribute
+                                                                                                                            name="editable"
+                                                                                                                            use="required" />
+                                                                                                                    </xs:complexType>
+                                                                                                                </xs:element>
+                                                                                                            </xs:sequence>
+                                                                                                            <xs:attribute
+                                                                                                                name="name"
+                                                                                                                use="required" />
+                                                                                                        </xs:complexType>
+                                                                                                    </xs:element>
+                                                                                                </xs:sequence>
+                                                                                                <xs:attribute
+                                                                                                    name="string"
+                                                                                                    use="required" />
+                                                                                            </xs:complexType>
+                                                                                        </xs:element>
+                                                                                    </xs:sequence>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute name="string"
+                                                                use="required" />
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute name="name" use="required" />
+                                                <xs:attribute name="type" />
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="model" use="required" />
+                                    <xs:attribute name="id" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
